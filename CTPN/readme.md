@@ -13,7 +13,7 @@ ctpnParse("./ctpn_repo/data/demo/006.jpg")
     "cnt": 8,
     "frames": [
         {
-            "points":[
+            "points": [
                 {"x": "250", "y": "800"},
                 {"x": "930", "y": "817"},
                 {"x": "928", "y": "911"},

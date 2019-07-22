@@ -167,7 +167,7 @@ def ctpnParse(image_path):
             }
             '''
 
-image_path = './ctpn_repo/data/demo/006.jpg'
+image_path = './ctpn_repo/data/demo/007.jpg'
 
 if __name__ == '__main__':
     print(ctpnParse(image_path))
