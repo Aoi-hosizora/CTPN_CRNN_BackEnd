@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # encoding: utf-8
 
-# Ref from chineseocr
+# Ref from chineseocr / chineseocr
 # https://github.com/chineseocr/chineseocr/blob/master/crnn/crnn_torch.py
 # Modified some code by Aoihosizora
 
@@ -14,8 +14,8 @@ import numpy as np
 import torch
 from torch.autograd import Variable 
 
-from crnn.utils import strLabelConverter, resizeNormalize
-from crnn.network import CRNN
+from utils import strLabelConverter, resizeNormalize
+from network import CRNN
 
 # flag
 LSTMFLAG = True # add lstm

@@ -3,7 +3,7 @@ __pycache__/
 models/
 
 # CTPN
-CTPN_repo/
+ctpn_repo/
 
 # CRNN
-CRNN_repo/
+crnn_repo//
