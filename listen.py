@@ -17,6 +17,7 @@ def setup(app: app.Flask):
     ErrorHandle.errorHandle(app)
     
     app.config['JSON_AS_ASCII'] = False
+    app.config['UPLOAD_FOLDER'] = './tmp/'
 
 if __name__ == "__main__":
     setup(FlaskApp)

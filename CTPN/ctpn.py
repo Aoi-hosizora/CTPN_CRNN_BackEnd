@@ -14,7 +14,9 @@ import numpy as np
 import tensorflow as tf
 
 sys.path.append(os.getcwd())
-sys.path.append('./ctpn_repo/')
+
+sys.path.append('./CTPN/')
+sys.path.append('./CTPN/ctpn_repo/')
 
 # TF_CPP_MIN_LOG_LEVEL 0: 输出所有信息
 # TF_CPP_MIN_LOG_LEVEL 1: 屏蔽通知信息
@@ -30,7 +32,7 @@ from utils.text_connector.detectors import TextDetector
 tf.app.flags.DEFINE_string('gpu', '0', '')
 
 # TODO
-tf.app.flags.DEFINE_string('checkpoint_path', 'ctpn_repo/checkpoints_mlt/', '')
+tf.app.flags.DEFINE_string('checkpoint_path', 'CTPN/ctpn_repo/checkpoints_mlt/', '')
 
 FLAGS = tf.app.flags.FLAGS
 
@@ -51,10 +53,11 @@ def resize_image(img):
     re_im = cv2.resize(img, (new_w, new_h), interpolation=cv2.INTER_LINEAR)
     return re_im, (new_h / img_size[0], new_w / img_size[1])
 
-def ctpnParse(image_path):
+def ctpnParse(im):
     '''
     转换获取图片文字区域组
     '''
+    # im = cv2.imread(image_path)
     os.environ['CUDA_VISIBLE_DEVICES'] = FLAGS.gpu
 
     with tf.get_default_graph().as_default():
@@ -80,7 +83,7 @@ def ctpnParse(image_path):
             print(image_path)
             start = time.time()
             try:
-                im = cv2.imread(image_path)[:, :, ::-1]
+                im = im[:, :, ::-1]
             except:
                 print("Error reading image {}!".format(image_path))
                 exit(1)
@@ -167,7 +170,13 @@ def ctpnParse(image_path):
             }
             '''
 
-image_path = './ctpn_repo/data/demo/007.jpg'
+def ctpnGetRegions(img: np.ndarray):
+    '''
+    img = cv2.imread(img_path)
+    '''
+    return ctpnParse(img)
 
-if __name__ == '__main__':
-    print(ctpnParse(image_path))
+# image_path = './ctpn_repo/data/demo/007.jpg'
+
+# if __name__ == '__main__':
+#     print(ctpnParse(image_path))

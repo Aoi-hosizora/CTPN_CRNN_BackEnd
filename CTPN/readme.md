@@ -1,7 +1,7 @@
 # ctpn.py API
 ```python
-from ctpn import ctpnParse
-ctpnParse("./ctpn_repo/data/demo/006.jpg")
+from ctpn import ctpnGetRegions
+ctpnParse(cv22.imread(img_path))
 ```
 
 ```json

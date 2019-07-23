@@ -1,7 +1,7 @@
 # crnn.py API
 ```python
 from crnn import crnnRegionsOcr
-print(crnnRegionsOcr('./data/007.jpg', {
+print(crnnRegionsOcr(cv2.imread(img_path), {
     'size': {'x': 682, 'y': 1024},
     'cnt': 5,
     'frames': [

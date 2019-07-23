@@ -1,6 +1,10 @@
 # CTPN_CRNN_BackEnd
 + Use [CTPN](https://github.com/eragonruan/text-detection-ctpn) (tf) to detect text regions of image 
 + Use [CRNN](https://github.com/meijieru/crnn.pytorch) (torch) to recognize text
++ Use [Flask](flask.pocoo.org/) to make restful api response
+
+### API
++ see [readme.md](https://github.com/Aoi-hosizora/CTPN_CRNN_BackEnd/Server/readme.md)
 
 ### Usage
 + CTPN
@@ -34,6 +38,10 @@ chmod +x make.sh
     + `pytorch` 1.1.0
     + `lmdb` 0.96
     + others see code
++ Server
+    + `Flask` 1.0.2
+    + `flask_cors` 3.0.8
+    + `werkzeug` 0.14.1
 
 ### References
 + [chineseocr](https://github.com/chineseocr/chineseocr)
