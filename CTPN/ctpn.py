@@ -129,12 +129,12 @@ def ctpnParse(image_path):
                 pnts = []
                 # i = 01, 23, 45, 67
                 pnts.extend({
-                    "x": str(int(box[i * 2] / rh)),
-                    "y": str(int(box[i * 2 + 1] / rw))
+                    "x": int(box[i * 2] / rh),
+                    "y": int(box[i * 2 + 1] / rw)
                 } for i in range(4))
                 frames.append({
                     "points": pnts,
-                    "score": str(scores[i])
+                    "score": scores[i]
                 })
 
             return {

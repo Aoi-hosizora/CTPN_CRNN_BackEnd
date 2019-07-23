@@ -1,9 +1,12 @@
+# VS code
 __pycache__/
-
-models/
+.vscode/
 
 # CTPN
 ctpn_repo/
 
 # CRNN
-crnn_repo//
+models/
+
+# Flask
+!/Server/Models
