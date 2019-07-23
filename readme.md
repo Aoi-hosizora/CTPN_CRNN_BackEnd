@@ -4,7 +4,7 @@
 + Use [Flask](flask.pocoo.org/) to make restful api response
 
 ### API
-+ see [readme.md](https://github.com/Aoi-hosizora/CTPN_CRNN_BackEnd/Server/readme.md)
++ see [readme.md](https://github.com/Aoi-hosizora/CTPN_CRNN_BackEnd/blob/master/Server/readme.md)
 
 ### Usage
 + CTPN
