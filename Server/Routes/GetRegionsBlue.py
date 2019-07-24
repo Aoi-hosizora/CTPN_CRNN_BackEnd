@@ -25,6 +25,7 @@ def getMsgInBlue():
     )
 
 @blue_regions.route("/upload", methods=['POST'])
+@blue_regions.route("/upload/", methods=['POST'])
 def getRegionsInBlue():
 
     img = request.files.get('img')

@@ -20,7 +20,8 @@
     + `werkzeug` 0.14.1
 
 ### API
-+ see [readme.md](https://github.com/Aoi-hosizora/CTPN_CRNN_BackEnd/blob/master/Server/readme.md)
++ Document see [readme.md](https://github.com/Aoi-hosizora/CTPN_CRNN_BackEnd/blob/master/Server/readme.md)
++ Front-End(Android) see [OCRActivity.java](https://github.com/Aoi-hosizora/Biji_Baibuti/blob/Module-Note/app/src/main/java/com/baibuti/biji/UI/Activity/OCRActivity.java)
 
 ### Build
 + CTPN
@@ -88,8 +89,7 @@ python3 listen.py # Listen 0.0.0.0:1627
 
 ### Screenshot
 ![Ret](./assets/RetScreenShot.jpg)
-> ![007.jpg](https://github.com/eragonruan/text-detection-ctpn/blob/banjin-dev/data/demo/007.jpg?raw=true)
-> ![007.jpg](https://github.com/eragonruan/text-detection-ctpn/blob/banjin-dev/data/res_oriented/007.jpg?raw=true)
+![Front](./assets/AndroidScreenShot.jpg)
 
 ### References
 + [chineseocr](https://github.com/chineseocr/chineseocr)
