@@ -34,10 +34,11 @@ cd CTPN/
 git clone https://github.com/eragonruan/text-detection-ctpn.git
 mv text-detection-ctpn/ ctpn_repo/
 
+cd ctpn_repo/
 # download checkpoints_mlt.zip
 unzip checkpoints_mlt.zip
 
-cd ctpn_repo/utils/bbox
+cd utils/bbox
 chmod +x make.sh
 ./make.sh
 ```

@@ -13,11 +13,6 @@ import cv2
 import numpy as np
 import tensorflow as tf
 
-sys.path.append(os.getcwd())
-
-sys.path.append('./CTPN/')
-sys.path.append('./CTPN/ctpn_repo/')
-
 # TF_CPP_MIN_LOG_LEVEL 0: 输出所有信息
 # TF_CPP_MIN_LOG_LEVEL 1: 屏蔽通知信息
 # TF_CPP_MIN_LOG_LEVEL 2: 屏蔽通知信息和警告信息
@@ -25,9 +20,12 @@ sys.path.append('./CTPN/ctpn_repo/')
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
-from nets import model_train as model
-from utils.rpn_msr.proposal_layer import proposal_layer
-from utils.text_connector.detectors import TextDetector
+sys.path.append('./CTPN/ctpn_repo/')
+sys.path.append('./CTPN/ctpn_repo/utils/')
+
+# from nets import model_train as model
+import utils.rpn_msr.proposal_layer.proposal_layer as proposal_layer
+import utils.text_connector.detectors.TextDetector as TextDetector
 
 tf.app.flags.DEFINE_string('gpu', '0', '')
 
@@ -80,12 +78,12 @@ def ctpnParse(im):
             ####################################################################################
             # read img
 
-            print(image_path)
+            # print(image_path)
             start = time.time()
             try:
                 im = im[:, :, ::-1]
             except:
-                print("Error reading image {}!".format(image_path))
+                # print("Error reading image {}!".format(image_path))
                 exit(1)
 
             ####################################################################################
@@ -176,7 +174,7 @@ def ctpnGetRegions(img: np.ndarray):
     '''
     return ctpnParse(img)
 
-# image_path = './ctpn_repo/data/demo/007.jpg'
+# image_path = '/content/drive/My Drive/Colab/CTPN_CRNN_BackEnd/CTPN/ctpn_repo/data/demo/006.jpg'
 
 # if __name__ == '__main__':
-#     print(ctpnParse(image_path))
+#     print(ctpnParse(cv2.imread(image_path)))

@@ -13,8 +13,8 @@ def setup(app: app.Flask):
     设置 中间件 蓝图 编码
     '''
     CorsMw.setupCors(app)
-    GetRegionsBlue.registerBlueRegions(app)
     ErrorHandle.errorHandle(app)
+    GetRegionsBlue.registerBlueRegions(app)
     
     app.config['JSON_AS_ASCII'] = False
     app.config['UPLOAD_FOLDER'] = './tmp/'
